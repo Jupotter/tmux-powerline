@@ -25,7 +25,12 @@ fi
 
 
 if [ -x "np_mpd" ]; then
-    np=$(./np_mpd)
+#   np=$(./np_mpd)
+    np=""
+    if [ $(mpc status | grep '[playing]') ]; then
+        np=$(mpc --format "%artist%\n%title%" | grep -Pzo '^(.|\n)*?(?=\[)' |\
+        sed  ':a;N;$!ba;s/\n/ - /g' | sed 's/\s*-\s$//')
+    fi
     if [ -n "$np" ]; then
         case "$trim_method" in
             "roll")
