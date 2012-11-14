@@ -50,7 +50,7 @@ if [[ ${now_playing["script"]} ]]; then
 	now_playing+=(["foreground"]="colour37")
 	now_playing+=(["background"]="colour234")
 	now_playing+=(["separator"]="${separator_left_bold}")
-	register_segment "now_playing"
+# 	register_segment "now_playing"
 fi
 
 declare -A cpu
