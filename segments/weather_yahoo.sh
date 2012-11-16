@@ -5,10 +5,10 @@
 # 1. Go to Yahoo weather http://weather.yahoo.com/
 # 2. Find the weather for you location
 # 3. Copy the last numbers in that URL. e.g. "http://weather.yahoo.com/united-states/california/newport-beach-12796587/" has the number "12796587"
-location="12796587"
+location="12728381"
 
 # Can be any of {c,f,k}.
-unit="f"
+unit="c"
 
 # The update period in seconds.
 update_period=600
@@ -42,13 +42,13 @@ get_condition_symbol() {
         echo "☁"
         ;;
     "tornado" | "tropical storm" | "hurricane" | "severe thunderstorms" | "thunderstorms" | "isolated thunderstorms" | "scattered thunderstorms")
-            #echo "⚡"
-            echo "☈"
+            echo "⚡"
+            #echo "☈"
         ;;
     "dust" | "foggy" | "haze" | "smoky" | "blustery" | "mist")
-        #echo "♨"
+        echo "♨"
         #echo "﹌"
-        echo "〰"
+        #echo "〰"
         ;;
     "windy")
         #echo "⚐"
