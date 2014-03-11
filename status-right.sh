@@ -50,7 +50,7 @@ if [[ ${now_playing["script"]} ]]; then
 	now_playing+=(["foreground"]="colour37")
 	now_playing+=(["background"]="colour234")
 	now_playing+=(["separator"]="${separator_left_bold}")
-# 	register_segment "now_playing"
+	register_segment "now_playing"
 fi
 
 declare -A cpu
@@ -65,7 +65,7 @@ load+=(["script"]="${segments_path}/load.sh")
 load+=(["foreground"]="colour167")
 load+=(["background"]="colour237")
 load+=(["separator"]="${separator_left_bold}")
-register_segment "load"
+#register_segment "load"
 
 declare -A battery
 if [ "$PLATFORM" == "mac" ]; then
